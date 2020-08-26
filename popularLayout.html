@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: montserrat;
+        }
+        
+        .main {
+            padding: 20px;
+        }
+        
+        .heading {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 5%;
+            margin-bottom: 2%;
+        }
+        
+        .parent {
+            height: 50vh;
+            width: 50vw;
+            display: grid;
+            place-items: center;
+            background: lightblue;
+            resize: both;
+            overflow: auto;
+        }
+        
+        .ex2.parent {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
+            width: 50vw;
+        }
+        
+        .ex2.child {
+            flex: 0 1 150px;
+            margin: 5px;
+        }
+        
+        .child {
+            background-color: coral;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        
+        .container {
+            display: flex;
+        }
+        
+        .info {
+            padding: 2em;
+        }
+        
+        hr {
+            margin: 5em
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <center>
+            Popular layouts
+        </center>
+    </h1>
+    <div class="main">
+        <div class="heading">1. Super centered</div>
+        <div class="container">
+            <div class="parent">
+                <div class="child">:)</div>
+            </div>
+            <div class="info">
+                <p>display -> grid</p>
+                <p> place-items -> center</p>
+                <p> resize-> both : can resize the grid from bottom right</p>
+                <p> overflow-> auto : overflow must be hidden/scroll/auto for resize to work</p>
+            </div>
+        </div>
+        <hr>
+        <div class="heading">2. Deconstucted pancake</div>
+        <div class="container">
+            <div class="ex2 parent">
+                <div class="ex2 child">1</div>
+                <div class="ex2 child">2</div>
+                <div class="ex2 child">3</div>
+            </div>
+            <div class="info">
+                <p>display -> flex</p>
+                <p> flex-wrap -> wrap : For moving element in next row </p>
+                <p> justify-content-> center : align items in center</p>
+                <p> flex -> 0 1 150px (do not grow if more width is available / shrink if less space is available / base width )</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
